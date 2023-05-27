@@ -16,6 +16,9 @@ export type LoadMoreService<R extends DataType> = (data?: R) => Promise<R>;
 
 export type LoadMoreBaseOptions<R> = Pick<
   Options<R, any>,
+  | 'cacheKey'
+  | 'setCache'
+  | 'getCache'
   | 'ready'
   | 'manual'
   | 'refreshDeps'
